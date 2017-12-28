@@ -4,11 +4,14 @@
 	<meta charset="utf-8">
 	<title>wen</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/default.css" />
-	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css"/>
+	<link rel="stylesheet" type="text/css" href="css/component.css"/>
 	<script src="js/modernizr.custom.js"></script>
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css"/>
 
 	<!-- Demo styles -->
 	<style>
@@ -65,7 +68,7 @@
 
 		h1, .author {
 			margin-top: 0;
-			color: #3f6577;
+			color: #fff;
 		}
 
 		h2, h3 {
@@ -85,15 +88,6 @@
 			text-align: left;
 		}
 
-		.inner-bg {
-			background: url(img/bg.jpg) center no-repeat;
-			background-size: cover;
-		}
-
-		.img {
-			margin-top: 20px;
-		}
-
 		li span {
 			display: inline-flex;
 			width: 200px;
@@ -104,7 +98,7 @@
 		.min {
 			padding: 10px;
 			height: 600px;
-			background: rgba(46,177,255,0.58);
+			background: rgba(46, 177, 255, 0.78);
 			border-radius: 6px;
 		}
 
@@ -117,6 +111,23 @@
 			overflow: hidden;
 		}
 
+		.video {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+
+		.hoverContent {
+			position: relative;
+			z-index: 99;
+		}
+
+		.swiper-slide {
+			overflow: hidden;
+		}
+
 	</style>
 </head>
 <body>
@@ -124,58 +135,66 @@
 <div class="swiper-container" id="wrapWen">
 	<div class="swiper-wrapper">
 		<div class="swiper-slide">
-			<div class="logo"><img src="img/logo.png" alt=""></div>
-			<h1 class="">转正述职报告</h1>
-			<div class="author">作者:闻紫阳<br><span>时间:2017年12月</span></div>
+			<div class="video">
+				<video src="video/video1.mp4" autoplay="autoplay" loop="loop"></video>
+			</div>
+			<div class="hoverContent">
+				<div class="logo"><img src="img/logo.png" alt=""></div>
+				<h1 class="">转正述职报告</h1>
+				<div class="author">作者:闻紫阳<br><span>时间:2017年12月</span></div>
+			</div>
 		</div>
-		<div class="swiper-slide">
+		<div class="swiper-slide" style="background: url(img/total.jpeg) center no-repeat; background-size: cover;">
 			<h2>综述</h2>
 			<ul>
-				<li>1.个人简介</li>
-				<li>2.岗位职责</li>
-				<li>2.工作内容</li>
-				<li>3.工作体会</li>
-				<li>4.工作总结</li>
-				<li>5.未来规划</li>
+				<li>1、个人简介</li>
+				<li>2、岗位职责</li>
+				<li>2、工作内容</li>
+				<li>3、工作体会</li>
+				<li>4、工作总结</li>
+				<li>5、未来规划</li>
 			</ul>
 		</div>
-		<div class="swiper-slide">
+		<div class="swiper-slide" style="background: url(img/work2.jpeg) center no-repeat; background-size: cover;">
 			<div class="inner">
-				<h2>个人简介：</h2>
+				<h2 style="color: #ffffff;">个人简介：</h2>
 				<div class="intro min">
-					<ul>
+					<ul style="color: #ffffff;">
 						<li>姓名：闻紫阳</li>
 						<li>学历：本科</li>
 						<li>专业：软件工程</li>
 						<li>学校：合肥师范学院</li>
-						<li>来自：阜阳</li>
+						<li>来自：阜阳市</li>
+						<li>从事的工作：前端工程师</li>
 						<li>工作经历：2015年6月--2017年7月，工作于安徽网新科技有限公司</li>
 						<li>&emsp;&emsp;&emsp;&emsp;&emsp;2017年9月--至今，工作于安徽富驰信息技术有限公司</li>
-						<li>工作内容：</li>
+						<li>工作内容：2015年6月--2017年7月，从最开始的实习，然后到负责公司网站项目的前端页面构造、以及页面上的一些效果、交互等前端的制作，同时也参与网站的后端的PHP、ASP
+							的功能开发与修改。
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="swiper-slide">
+		<div class="swiper-slide" style="background: url(img/career.jpeg) center no-repeat; background-size: cover;">
 			<div class="inner">
-				<h2>岗位职责：</h2>
+				<h2 style="color: #ffffff;">岗位职责：</h2>
 				<div class="intro min">
-					<ul>
-						<li>1.根据设计师的UI效果图，实现图片到网页的页面转化，并设计出合理的页面架构。</li>
-						<li>2.根据产品经理提供的业务信息以及后端人员提供的接口实现对应的数据展现以及交互实现。</li>
-						<li>3.兼容浏览器差异性。</li>
-						<li>4.同产品经理、设计师以及后端人员保持良好的沟通。</li>
-						<li>5.完成自测试和缺陷修改。</li>
+					<ul style="color: #ffffff;">
+						<li>1、根据设计师的UI效果图，实现图片到网页的页面转化，并设计出合理的页面架构。</li>
+						<li>2、根据产品经理提供的业务信息以及后端人员提供的接口实现对应的数据展现以及交互实现。</li>
+						<li>3、兼容浏览器差异性。</li>
+						<li>4、同产品经理、设计师以及后端人员保持良好的沟通。</li>
+						<li>5、完成自测试和缺陷修改。</li>
 					</ul>
 
 				</div>
 			</div>
 		</div>
-		<div class="swiper-slide">
+		<div class="swiper-slide" style="background: url(img/job.jpeg) center no-repeat; background-size: cover;">
 			<div class="inner">
 				<h2>工作内容：</h2>
 				<div class="intro min">
-					<div class="swiper-container" id="jobWorker" >
+					<div class="swiper-container" id="jobWorker">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide tAL">
 								<ul>
@@ -188,7 +207,7 @@
 								</ul>
 							</div>
 							<div class="swiper-slide">
-								<h2>1.智能考核分析平台（KPI）</h2>
+								<h2>1、智能考核分析平台（KPI）</h2>
 							</div>
 							<div class="swiper-slide">
 								<h3>版本详情页</h3>
@@ -201,14 +220,13 @@
 							</div>
 							<div class="swiper-slide">
 								<h3>在线考核模块</h3>
-								<span>3种角色，共9个页签，48个页面</span>
-								<span>此模块是根据用户角色不同展示出不同的页面，而每个页面的产生也是通过页签控制来进行切换。</span>
+								<span>3种角色，共9个页签，48个页面</span> <span>此模块是根据用户角色不同展示出不同的页面，而每个页面的产生也是通过页签控制来进行切换。</span>
 							</div>
 							<div class="swiper-slide">
 								<img src="img/online.png" width="100%" alt="">
 							</div>
 							<div class="swiper-slide">
-								<h2>2.政工平台（PW）</h2>
+								<h2>2、政工平台（PW）</h2>
 							</div>
 							<div class="swiper-slide">
 								<h3>OCR页面</h3>
@@ -230,16 +248,15 @@
 								<img src="img/pw2.png" width="100%" alt="">
 							</div>
 							<div class="swiper-slide">
-								<h3>3.安徽法官培训平台</h3>
+								<h3>3、安徽法官培训平台</h3>
 								<div>首页重构</div>
 							</div>
 							<div class="swiper-slide">
 								<h4>PX首页部分：</h4>
-								<img src="img/list.png" alt="">
-								<img src="img/pic23.png" width="100%" alt="">
+								<img src="img/list.png" alt=""> <img src="img/pic23.png" width="100%" alt="">
 							</div>
 							<div class="swiper-slide">
-								<h3>4.其他</h3>
+								<h3>4、其他</h3>
 							</div>
 							<div class="swiper-slide">
 								<h4>智能辅助决策系统首页：</h4>
@@ -252,6 +269,18 @@
 								<h4>页面规范部分样式：</h4>
 								<img src="img/style.png" alt="">
 							</div>
+							<div class="swiper-slide">
+								<h3>5、工作难度和进度</h3>
+							</div>
+							<div class="swiper-slide">
+								<ul style="text-align: left;">
+									<li>工作难度：两个方面</li>
+									<li>1、页面结构以及页面的css3效果、处理起来还是很通畅的。</li>
+									<li>2、页面脚本：开发起来难度也不是很大，需要升对代码的全局思考以及结构的优化，同时探索简化方案。</li>
+									<li>3、错误预估接口联调时间在开发过程中的占比。</li>
+								</ul>
+
+							</div>
 						</div>
 					</div>
 					<div class="swiper-pagination" id="jobWorkerPagination"></div>
@@ -259,31 +288,32 @@
 				</div>
 			</div>
 		</div>
-		<div class="swiper-slide">
+		<div class="swiper-slide" style="background: url(img/idea.jpeg) center no-repeat; background-size: cover;">
 			<div class="inner">
 				<h2>工作体会：</h2>
-				<div class="intro">
+				<div class="intro min" style="background: rgba(255, 255, 255, 0.6); height: 300px;">
 					<ul>
-						<li>1.团队成员之间的良好沟通，能够提升工作效率。</li>
-						<li>2.自我的认识：作为一个前端，能够保证页面的还原度以及页面质量的输出，同时需要加强业务梳理能力以及逻辑代码的美观度以及可维护性。</li>
-						<li>3.保持一个积极向上的心理状态。</li>
+						<li>1、团队成员之间的良好沟通，能够提升工作效率。</li>
+						<li>2、自我的认识：作为一个前端，能够保证页面的还原度以及页面质量的输出，同时需要加强业务梳理能力以及逻辑代码的美观度以及可维护性。</li>
+						<li>3、保持一个积极向上的心理状态。</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="swiper-slide">
+		<div class="swiper-slide" style="background: url(img/career.jpeg) center no-repeat; background-size: cover;">
 			<div class="inner">
 				<h2>工作总结：</h2>
-				<div class="intro">
+				<div class="intro min" style="background: rgba(255, 255, 255, 0.6); height: 300px;">
 					<ul>
-						<li>1.在与团队成员沟通过程中，凝练自己的语言，能够及时的反馈准确的信息给他人。</li>
-						<li>2.在工作中及时总结自己在项目制作过程中的问题，解决方案，寻找更优的解决方式。</li>
-						<li>3.a.事情起步之前，应该总体把握自己开发部分的前后关联性，梳理自己的流程思路，<br>&emsp;b.其后是设计自己代码结构，及时优化，<br>&emsp;c.合理划分自己的时间，做到更好的提高效率。</li>
+						<li>1、在与团队成员沟通过程中，凝练自己的语言，能够及时的反馈准确的信息给他人。</li>
+						<li>2、在工作中及时总结自己在项目制作过程中的问题，解决方案，寻找更优的解决方式。</li>
+						<li>3、a.事情起步之前，应该总体把握自己开发部分的前后关联性，梳理自己的流程思路，<br>&emsp;b.其后是设计自己代码结构，及时优化，<br>&emsp;c.合理划分自己的时间，做到更好的提高效率。
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="swiper-slide">
+		<div class="swiper-slide" style="background: url(img/future.png) center no-repeat; background-size: cover;">
 			<div class="inner min">
 				<div class="swiper-container" id="future">
 					<div class="swiper-wrapper">
@@ -292,8 +322,8 @@
 							<div class="intro">
 								<ul>
 									<li>技术栈：vue + vuex + axios + node</li>
-									<li><span><img src="img/vue.png" width="100%" alt=""></span><span><img src="img/node.png"
-											width="100%" alt=""></span></li>
+									<li><span><img src="img/vue.png" width="100%" alt=""></span><span><img
+											src="img/node.png" width="100%" alt=""></span></li>
 								</ul>
 							</div>
 						</div>
@@ -309,7 +339,7 @@
 							<h2>ON THE WAY--vue</h2>
 							<div class="intro">
 								<ul>
-									<li class="heig"><img src="img/vue1.png"alt=""></li>
+									<li class="heig"><img src="img/vue1.png" alt=""></li>
 								</ul>
 							</div>
 						</div>
@@ -344,20 +374,33 @@
 								</ul>
 							</div>
 						</div>
+						<div class="swiper-slide">
+							<h2>NEXT TO：交流</h2>
+							<div class="intro">
+								<ul>
+									<li>每个人都有自己的沟通方式，交流更多体现在适应。</li>
+									<li>再者就是表述清楚自己的想要描述的东西。</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="swiper-pagination" id="futurePagination"></div>
 			</div>
 
 		</div>
-		<div class="swiper-slide">
-			<h1>Thank you !</h1>
-			<p>Enjoy your life!</p>
+		<div class="swiper-slide" style="background: url(img/thank.jpeg) center no-repeat; background-size: cover;">
+			<div class="inner" style="text-align: left;">
+				<h1>Thank you !</h1>
+				<p>Enjoy your life!</p>
+			</div>
 		</div>
 	</div>
 	<!-- Add Pagination -->
 	<div class="swiper-pagination" id="wrapWenPagination"></div>
 </div>
+
+<script src="js/index.js"></script>
 
 <!-- Swiper JS -->
 <script src="js/swiper.min.js"></script>
@@ -372,6 +415,11 @@
         slidesPerView: 1,
         spaceBetween: 30,
         mousewheel: true,
+        effect: 'flip',
+        flipEffect: {
+            slideShadows: true,
+            limitRotation: true,
+        },
         pagination: {
             el: '#wrapWenPagination',
             clickable: true,
@@ -388,7 +436,7 @@
             stretch: 0,
             depth: 100,
             modifier: 1,
-            slideShadows : true,
+            slideShadows: true,
         },
         pagination: {
             el: '#jobWorkerPagination',
